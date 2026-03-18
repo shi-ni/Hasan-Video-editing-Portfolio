@@ -14,19 +14,43 @@
 </head>
 <body>
 
+  <!-- LOADER -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <div class="loader-line"></div>
+      <span class="loader-text">H. Zubair</span>
+    </div>
+  </div>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
   <!-- NAV -->
   <nav>
     <a class="nav-logo" href="#">H. Zubair</a>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#hire">Hire Me</a></li>
+      <li><a href="#about" class="nav-transition">About</a></li>
+      <li><a href="#work" class="nav-transition">Work</a></li>
+      <li><a href="#hire" class="nav-transition">Hire Me</a></li>
     </ul>
+    <button class="theme-toggle" aria-label="Toggle theme">
+      <span class="theme-toggle-icon">☀</span>
+    </button>
   </nav>
 
   <!-- HERO -->
   <section id="hero">
     <div class="hero-bg"></div>
+
+    <!-- Floating orbs -->
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="orb orb-3" aria-hidden="true"></div>
+
     <div class="filmstrip" aria-hidden="true">
       <div class="filmstrip-hole"></div>
       <div class="filmstrip-hole"></div>
@@ -38,16 +62,14 @@
       <div class="filmstrip-hole"></div>
     </div>
 
-    <p class="hero-tag">Video Editor &amp; Visual Storyteller</p>
-    <h1>Hasan<br><em>Zubair</em></h1>
-    <p class="hero-desc">
-      Crafting cinematic lyrical videos and high-energy content that moves audiences.
-      Specialising in lyrical edits, short-form content, and visual storytelling using
-      Adobe Premiere Pro and After Effects.
+    <p class="hero-tag reveal-text">Video Editor &amp; Visual Storyteller</p>
+    <h1 class="split-reveal">Hasan<br><em>Zubair</em></h1>
+    <p class="hero-desc reveal-text" style="--delay: 0.6s">
+      <span class="typewriter" data-text="Crafting cinematic lyrical videos and high-energy content that moves audiences. Specialising in lyrical edits, short-form content, and visual storytelling using Adobe Premiere Pro and After Effects."></span>
     </p>
-    <div class="hero-cta">
-      <a href="#work" class="btn-primary">View My Work</a>
-      <a href="#hire" class="btn-outline">Hire Me on Fiverr</a>
+    <div class="hero-cta reveal-text" style="--delay: 0.85s">
+      <a href="#work" class="btn-primary magnetic">View My Work</a>
+      <a href="#hire" class="btn-outline magnetic">Hire Me on Fiverr</a>
     </div>
 
     <div class="hero-scroll" aria-hidden="true">
@@ -60,7 +82,7 @@
   <section id="about">
     <div class="about-left fade-up">
       <p class="section-label">About</p>
-      <h2>Editing that<br><em style="font-family:'Cormorant Garamond',serif; font-style:italic;">feels</em> something</h2>
+      <h2 class="parallax-el" data-speed="0.03">Editing that<br><em style="font-family:'Cormorant Garamond',serif; font-style:italic;">feels</em> something</h2>
       <p class="about-text">
         I'm a video editor with a passion for <strong>lyrical storytelling</strong> — the kind of edit where every cut lands on a beat, every frame carries emotion, and the viewer feels the music as much as they hear it.
       </p>
@@ -70,11 +92,11 @@
 
       <div class="stats-row">
         <div>
-          <div class="stat-num">20+</div>
+          <div class="stat-num" data-count="20" data-suffix="+">0</div>
           <div class="stat-label">Client Videos</div>
         </div>
         <div>
-          <div class="stat-num">2</div>
+          <div class="stat-num" data-count="2">0</div>
           <div class="stat-label">Active Fiverr Gigs</div>
         </div>
         <div>
@@ -120,14 +142,14 @@
     <div class="work-intro fade-up">
       <div>
         <p class="section-label">Selected Work</p>
-        <h2>Client Projects</h2>
+        <h2 class="parallax-el" data-speed="0.03">Client Projects</h2>
       </div>
       <p class="work-note">Real work done for real clients — more available on request.</p>
     </div>
 
     <!-- Landscape videos -->
     <div class="video-grid fade-up">
-      <div class="video-card">
+      <div class="video-card tilt">
         <div class="video-wrapper landscape">
           <iframe
             src="https://www.youtube.com/embed/uD9hTpVL1TU"
@@ -142,7 +164,7 @@
         </div>
       </div>
 
-      <div class="video-card">
+      <div class="video-card tilt">
         <div class="video-wrapper landscape">
           <iframe
             src="https://www.youtube.com/embed/mIxuuB4zvsY"
@@ -160,7 +182,7 @@
 
     <!-- Shorts row -->
     <div class="shorts-row fade-up">
-      <div class="video-card">
+      <div class="video-card tilt">
         <div class="video-wrapper portrait">
           <iframe
             src="https://www.youtube.com/embed/uYk_jq8-IX4"
@@ -175,7 +197,7 @@
         </div>
       </div>
 
-      <div class="video-card">
+      <div class="video-card tilt">
         <div class="video-wrapper portrait">
           <iframe
             src="https://www.youtube.com/embed/b4-bWte75uA"
@@ -195,29 +217,32 @@
   <!-- HIRE -->
   <section id="hire">
     <p class="section-label fade-up">Hire Me</p>
-    <h2 class="fade-up">Available on Fiverr</h2>
+    <h2 class="fade-up parallax-el" data-speed="0.03">Available on Fiverr</h2>
     <div class="gigs-grid fade-up">
 
-      <div class="gig-card">
+      <div class="gig-card tilt">
         <div class="gig-num">01</div>
         <p class="gig-title">Lyrical Video Editing</p>
         <p class="gig-desc">
           Beat-synced lyrical video edits with smooth transitions, kinetic text, and cinematic colour grading. Perfect for artists, musicians, and content creators who want their music to feel visual.
         </p>
-        <a class="gig-link" href="https://www.fiverr.com/s/DBvB1Eo" target="_blank" rel="noopener">View Gig on Fiverr</a>
+        <a class="gig-link magnetic" href="https://www.fiverr.com/s/DBvB1Eo" target="_blank" rel="noopener">View Gig on Fiverr</a>
       </div>
 
-      <div class="gig-card">
+      <div class="gig-card tilt">
         <div class="gig-num">02</div>
         <p class="gig-title">YouTube & Content Editing</p>
         <p class="gig-desc">
           High-retention video editing for YouTube channels and social media. Punchy cuts, captions, sound design, and pacing tuned to keep viewers watching from start to finish.
         </p>
-        <a class="gig-link" href="https://www.fiverr.com/s/bdEdpBN" target="_blank" rel="noopener">View Gig on Fiverr</a>
+        <a class="gig-link magnetic" href="https://www.fiverr.com/s/bdEdpBN" target="_blank" rel="noopener">View Gig on Fiverr</a>
       </div>
 
     </div>
   </section>
+
+  <!-- PAGE TRANSITION OVERLAY -->
+  <div class="page-transition" aria-hidden="true"></div>
 
   <!-- FOOTER -->
   <footer>
