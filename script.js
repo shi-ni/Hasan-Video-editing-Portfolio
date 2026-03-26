@@ -111,7 +111,7 @@ const sectionObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.05 });
 
-document.querySelectorAll('#about, #work, #hire').forEach((s) => sectionObserver.observe(s));
+document.querySelectorAll('#about, #work, #passion, #hire').forEach((s) => sectionObserver.observe(s));
 
 // ── Animated stat counters ──
 const statObserver = new IntersectionObserver((entries) => {

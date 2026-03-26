@@ -664,6 +664,7 @@ h2 {
 
 #about,
 #work,
+#passion,
 #hire {
   border-top: 1px solid var(--border);
 }
@@ -671,6 +672,7 @@ h2 {
 /* Animated section top border */
 #about::before,
 #work::before,
+#passion::before,
 #hire::before {
   content: '';
   position: absolute;
@@ -684,6 +686,7 @@ h2 {
 
 #about.in-view::before,
 #work.in-view::before,
+#passion.in-view::before,
 #hire.in-view::before {
   width: 180px;
 }
